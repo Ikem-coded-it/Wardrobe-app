@@ -1,0 +1,23 @@
+{
+  "name": "wardrobe-app",
+  "version": "1.0.0",
+  "description": "An app that creates random outfits for the user",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ikem-coded-it/Wardrobe-app.git"
+  },
+  "keywords": [],
+  "author": "Onubogu Ikemefuna C.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ikem-coded-it/Wardrobe-app/issues"
+  },
+  "homepage": "https://github.com/Ikem-coded-it/Wardrobe-app#readme",
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}
