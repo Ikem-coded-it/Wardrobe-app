@@ -8,15 +8,22 @@ const verify = require('./verification');
 const pc = require('prompt-sync');
 const prompt = pc();
 
+
+// START
 const initialize = () => {
     let haveAccount = prompt("Welcome, Do you have an account with us? (1)Yes (2)No: ")
 
-    if (haveAccount == 1) {
-        login();
-    } else if (haveAccount == 2) {
-        register();
+    if (haveAccount) {
+        if (haveAccount == 1) {
+            login();
+        } else if (haveAccount == 2) {
+            register();
+        }
+    } else {
+        console.log('Please select option 1 or 2');
+        initialize();
     }
-    initialize();
+    
 };
 
 
@@ -74,7 +81,7 @@ const login = () => {
 
 
 // WARDROBE OPTIONS
-const wardrobeOptions = () => {
+const wardrobeOptions = async () => {
     console.log('===========OPTIONS============')
     console.log('(1) Generate outfit');
     console.log('(2) Add new clothes to wardrobe');
@@ -87,7 +94,7 @@ const wardrobeOptions = () => {
     if (options == 1) {
         generate();
     } else if (options == 2) {
-        addClothes();
+        await controllers.addTops();
     } else if (options == 3) {
         seeClothes();
     } else if (options == 4) {

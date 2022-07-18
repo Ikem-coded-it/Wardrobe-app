@@ -2,7 +2,7 @@
 exports.isUserValid = (username, password) => {
     try {
         const data = require(`./Database/${username}.json`);
-        if (password == data.password) {
+        if (password == data[0].password) {
         return true;
     }
     } catch (error) {
